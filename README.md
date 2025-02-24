@@ -92,3 +92,38 @@ npm run format-test   Test all code is formatted properly
 npm run lint          Lint JavaScript
 npm run lint-test     Test all code is linted properly
 ```
+
+# Troubleshooting
+
+## Common Errors
+
+### "Extension context invalidated" Error
+
+If you see the following error in your console:
+
+```
+Uncaught (in promise) Error: Extension context invalidated.
+```
+
+This typically happens when:
+1. The extension has been disabled or removed
+2. The extension was updated
+3. Chrome browser was restarted
+4. The extension's background page was terminated
+
+**Solutions:**
+- Completely close and restart Chrome
+- Disable and re-enable the extension
+- Uninstall and reinstall the extension
+- Check for the latest version of the extension
+
+## Customization Options
+
+### Controlling What Gets Uploaded
+
+By default, LeetHub uploads your code solutions automatically. If you want to also upload:
+
+- **Problem README files**: Uncomment the `/* Upload README */` section in the code
+- **Notes for problems**: Uncomment the `/* Upload Notes if any*/` section in the code
+
+These options can be particularly useful if you want to maintain a comprehensive repository with problem descriptions and your personal notes alongside your solutions.
