@@ -959,14 +959,14 @@ const loader = (leetCode) => {
         const shaExists = stats?.shas?.[problemName]?.['README.md'] !== undefined;
 
         if (!shaExists) {
-          // return uploadGit(
-          //   btoa(unescape(encodeURIComponent(probStatement))),
-          //   problemName,
-          //   'README.md',
-          //   readmeMsg,
-          //   'upload',
-          //   false,
-          // );
+          return uploadGit(
+            btoa(unescape(encodeURIComponent(probStatement))),
+            problemName,
+            'README.md',
+            readmeMsg,
+            'upload',
+            false,
+          );
         }
       });
 
@@ -974,14 +974,14 @@ const loader = (leetCode) => {
       notes = leetCode.getNotesIfAny();
       let updateNotes;
       if (notes != undefined && notes.length > 0) {
-        // updateNotes = uploadGit(
-        //   btoa(unescape(encodeURIComponent(notes))),
-        //   problemName,
-        //   'NOTES.md',
-        //   createNotesMsg,
-        //   'upload',
-        //   false,
-        // );
+        updateNotes = uploadGit(
+          btoa(unescape(encodeURIComponent(notes))),
+          problemName,
+          'NOTES.md',
+          createNotesMsg,
+          'upload',
+          false,
+        );
       }
 
       /* Upload code to Git */

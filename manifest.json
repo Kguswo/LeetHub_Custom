@@ -20,7 +20,16 @@
   "permissions": [
     "unlimitedStorage",
     "storage",
-    "webNavigation"
+    "webNavigation",
+    "activeTab",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://leetcode.com/*",
+    "https://github.com/*",
+    "https://api.github.com/*",
+    "https://practice.geeksforgeeks.org/*"
   ],
   "content_scripts": [
     {
